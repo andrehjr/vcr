@@ -34,6 +34,13 @@ jobs:
       env:
         BUNDLE_GEMFILE: Gemfile.faraday-1.0.0
 
+    - name: cucumber
+      run: |
+        bundle install
+        bundle exec cucumber features/test_frameworks/cucumber.feature
+      env:
+        BUNDLE_GEMFILE: Gemfile.cucumber
+
     - name: rspec
       run: |
         bundle install
