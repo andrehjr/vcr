@@ -132,6 +132,7 @@ Feature: Usage with Cucumber
     And the file "features/cassettes/cucumber_tags/localhost_request.yml" should contain "Hello localhost_request_2"
     And the file "features/cassettes/nested_cassette.yml" should contain "Hello nested_cassette"
     And the file "features/cassettes/allowed.yml" should contain "Hello allowed"
+    And I see the file "features/cassettes/VCR_example/tagged_scenario.yml"
     And the file "features/cassettes/VCR_example/tagged_scenario.yml" should contain "Hello localhost_request_1"
     And the file "features/cassettes/VCR_example/tagged_scenario_outline/Example_at_line_33.yml" should contain "Hello localhost_request_1"
 

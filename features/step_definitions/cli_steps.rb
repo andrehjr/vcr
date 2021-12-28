@@ -182,6 +182,13 @@ Then(/^the file "([^"]*)" should contain a YAML fragment like:$/) do |file_name,
   end
 end
 
+Then(/^I see the file "([^"]*)"$/) do |file_name|
+  cd('.') do
+    log Dir.glob('features/cassettes/VCR_example/**/*')
+    log File.read("features/cassettes/VCR_example/#{file_name}")
+  end
+end
+
 Then(/^the cassette "([^"]*)" should have the following response bodies:$/) do |file, table|
   interactions = cd('.') { YAML.load_file(file) }['http_interactions'].map { |h| VCR::HTTPInteraction.from_hash(h) }
   actual_response_bodies = interactions.map { |i| i.response.body }
