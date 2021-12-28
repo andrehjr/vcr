@@ -185,7 +185,7 @@ end
 Then(/^I see the file "([^"]*)"$/) do |file_name|
   cd('.') do
     log Dir.glob('features/cassettes/VCR_example/**/*')
-    log File.read("features/cassettes/VCR_example/#{file_name}")
+    log File.read(file_name)
   end
 end
 
