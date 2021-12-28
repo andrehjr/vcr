@@ -184,7 +184,7 @@ end
 
 Then(/^I see the file "([^"]*)"$/) do |file_name|
   cd('.') do
-    log Dir.glob('features/cassettes/VCR_example/**/*')
+    log Dir.glob('**/*.yml')
     log File.read(file_name)
   end
 end
