@@ -5,7 +5,7 @@ gemspec
 # https://github.com/typhoeus/typhoeus/issues/705
 gem "ethon", "0.15.0"
 
-gem "aruba", "~> 0.14.14"
+gem "aruba"
 gem "bigdecimal"
 gem "codeclimate-test-reporter", "~> 0.4"
 gem "cucumber", "~> 9.0"
